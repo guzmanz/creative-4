@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src="javascripts/app.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <meta charset="utf-8">
+  <title>Chat</title>
+</head>
+<body>
+
+  <div id='app' ng-app='app' ng-controller='mainCtrl'>
+
+<h1>Write a new message!</h1>
+<form id="newMessage" ng-submit="addMessage()">
+  <input type="text" ng-model="Name" placeholder="Name"  value=""><br>
+  <input type="text" ng-model="Message" placeholder= "Message" value=""><br>
+  <input type="submit" value="Send">
+</form>
+
+    <div ng-if='!messages.length' class='no-messages left stretch'>
+      <h1 class='h1'>
+        Set up your endpoint at `/messages` to get this view working
+      </h1>
+    </div>
+
+    <ul ng-if='messages.length' class='list left stretch'>
+      <li ng-repeat='m in messages' class='message'>
+        <h1>{{ m.name }}</h1>
+        <p>{{m.message}}</p>
+      </li>
+    </ul>
+
+  </div>
+
+</body>
+</html>
