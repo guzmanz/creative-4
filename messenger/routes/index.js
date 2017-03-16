@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var flag = false;
 var messages= [
   {
     name: 'Username',
@@ -27,6 +27,10 @@ router.get('/message', function(req, res) {
 router.post('/message', function(req, res) {
     console.log("In Messages ");
     console.log(req.body);
+    if (flag == false) {
+	messages.pop();
+    }
+    flag = true;
     messages.unshift(req.body);
     res.end('{"success" : "Updated Successfully", "status" : 200}');
 });
