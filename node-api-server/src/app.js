@@ -5,7 +5,7 @@ app.controller('mainCtrl', mainCtrl)
 
 function messageFetcher ($http) {
 
-  var API_ROOT = 'pokemon'
+  var API_ROOT = 'message'
   return {
     get: function () {
       return $http
@@ -18,9 +18,9 @@ function messageFetcher ($http) {
 
 }
 
-function mainCtrl ($scope, pokemonFetcher) {
+function mainCtrl ($scope, messageFetcher) {
 
-  $scope.messages = [{name: 'Username', message: 'HI!' }];
+  $scope.messages = [];
 
   messageFetcher.get()
     .then(function (data) {
