@@ -27,7 +27,7 @@ router.get('/message', function(req, res) {
 router.post('/message', function(req, res) {
     console.log("In Messages ");
     console.log(req.body);
-    messages.push(req.body);
+    messages.unshift(req.body);
     res.end('{"success" : "Updated Successfully", "status" : 200}');
 });
 
