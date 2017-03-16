@@ -108,6 +108,11 @@ div, ul {
   padding: 20px;
 }
 
+#posterName {
+  color: #C0C0C0;
+  text-decoration: underline;
+}
+
 .avatar {
   width: 100px;
   height: 100px;
@@ -118,4 +123,5 @@ div, ul {
   list-style: none;
   background-color: #6D7993;
   color: white;
+  height: 100%;
 }

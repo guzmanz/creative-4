@@ -3,6 +3,11 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 <script src="javascripts/app.js"></script>
+<script>
+function myFunction() {
+    document.getElementById("newMessage").reset();
+}
+</script>
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <meta charset="utf-8">
   <title>Chat</title>
@@ -15,7 +20,7 @@
 <form id="newMessage" ng-submit="addMessage()">
   <input id="inputName" type="text" ng-model="Name" placeholder="Name"  value=""><br><br>
   <textarea id="inputMessage" type="text" ng-model="Message" placeholder= "Message" value=""></textarea><br>
-  <input id="submitButton" type="submit" value="Send"><br>
+  <input id="submitButton" type="submit" value="Send" onclick="myFunction()"><br>
 </form>
     <div ng-if='!messages.length' class='no-messages left stretch'>
       <h1 class='h1'>
@@ -25,10 +30,11 @@
 
     <ul ng-if='messages.length' class='list left stretch'>
       <li ng-repeat='m in messages' class='message'>
-        <h1>{{ m.name }}</h1>
+        <h1 id="posterName">{{ m.name }}</h1>
         <p>{{m.message}}</p>
       </li>
     </ul>
+
 
   </div>
 
