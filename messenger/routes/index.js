@@ -4,13 +4,13 @@ var router = express.Router();
 var messages= [
   {
     name: 'Username',
-    message: 'Hi!'
+    message: 'Hi! Your message will appear here.'
   },
-  {
-    name: 'Charmander',
-    message: 'char char char'
-
-  }
+  // {
+  //   name: 'Charmander',
+  //   message: 'char char char'
+  //
+  // }
 ];
 
 

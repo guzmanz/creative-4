@@ -11,16 +11,15 @@
 
   <div id='app' ng-app='app' ng-controller='mainCtrl'>
 
-<h1>Write a new message!</h1>
+<span id="heading">Write a new message!</span>
 <form id="newMessage" ng-submit="addMessage()">
-  <input type="text" ng-model="Name" placeholder="Name"  value=""><br>
-  <input type="text" ng-model="Message" placeholder= "Message" value=""><br>
-  <input type="submit" value="Send">
+  <input id="inputName" type="text" ng-model="Name" placeholder="Name"  value=""><br><br>
+  <textarea id="inputMessage" type="text" ng-model="Message" placeholder= "Message" value=""></textarea><br>
+  <input id="submitButton" type="submit" value="Send">
 </form>
-
     <div ng-if='!messages.length' class='no-messages left stretch'>
       <h1 class='h1'>
-        Set up your endpoint at `/messages` to get this view working
+        <!-- Set up your endpoint at `/messages` to get this view working -->
       </h1>
     </div>
 
