@@ -11,7 +11,7 @@
     box-shadow: 10px 10px #6D7993;
 }
 
-html, body, #app {
+html, body {
   width: 100%;
   height: 100%;
   padding: 0;
@@ -124,4 +124,9 @@ div, ul {
   background-color: #6D7993;
   color: white;
   height: 100%;
+}
+
+footer {
+  height: 100px; 
+  background-color: #9099A2;
 }
