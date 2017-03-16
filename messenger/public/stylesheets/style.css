@@ -30,7 +30,7 @@ div, ul {
 }
 
 #inputName {
-  height: 50px;
+  height: 45px;
   width: 300px;
   font-size: 30pt;
 }
@@ -116,6 +116,6 @@ div, ul {
 .list {
   text-align: center;
   list-style: none;
-  background-color: #4FC1E9;
+  background-color: #6D7993;
   color: white;
 }
